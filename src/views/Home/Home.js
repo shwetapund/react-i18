@@ -13,7 +13,7 @@ const usersCount = 20;
     <div className='title-i18n'>
       Internationalization🌎I18n✨
     </div>
-    <h3 className='text-center'>Language translator</h3>
+
     <div className='i18-container'>
 
       <h1>{I18n("welcomeMessage")}</h1>
