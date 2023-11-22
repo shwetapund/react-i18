@@ -9,7 +9,12 @@ const usersCount = 20;
 
 
   return (
-    <div>
+    <>
+    <div className='title-i18n'>
+      Internationalization🌎I18n✨
+    </div>
+    <h3 className='text-center'>Language translator</h3>
+    <div className='i18-container'>
 
       <h1>{I18n("welcomeMessage")}</h1>
 
@@ -19,7 +24,12 @@ const usersCount = 20;
 
       <h5>{I18n("endMessage")}</h5>
 
+      <p>
+        {I18n("userStatMessage", "<studentCount>",usersCount)}
+      </p>
+      <span className='lang-text'>✍ Lang : </span>
       <select 
+      className='select-box'
       defaultValue={localStorage.getItem("lang")}
       onChange={(e)=>{
         localStorage.setItem("lang", e.target.value);
@@ -29,11 +39,8 @@ const usersCount = 20;
         <option value='hi'>Hindi</option>
         <option value='en'>English</option>
       </select>
-
-      <p>
-        {I18n("userStatMessage", "<studentCount>",usersCount)}
-      </p>
     </div>
+    </>
   )
 }
 
